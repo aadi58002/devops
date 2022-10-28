@@ -1,0 +1,6 @@
+
+start:
+    sudo podman container start kind-control-plane
+    sudo kubectl proxy
+kill:
+    sudo podman container kill kind-control-plane
