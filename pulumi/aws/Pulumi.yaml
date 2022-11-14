@@ -1,6 +1,8 @@
-name: aws
-description: A minimal AWS Python Pulumi program
-runtime:
-    name: python
-    options:
-        virtualenv: venv
+name: quickstart
+description: A minimal AWS Pulumi YAML program
+runtime: yaml
+resources:
+    my-bucket:
+        type: aws:s3:Bucket
+outputs:
+    bucketName: ${my-bucket.id}
